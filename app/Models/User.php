@@ -13,7 +13,7 @@ class User extends Authenticatable implements FilamentUser
 {
     public function canAccessPanel(Panel $panel): bool
     {
-        return $this->email === 'admin@admin.com' && $this->is_admin;
+        return $this->email === 'admin@admin.com' && $this->is_admin == true;
     }
 
     /** @use HasFactory<\Database\Factories\UserFactory> */
@@ -28,6 +28,7 @@ class User extends Authenticatable implements FilamentUser
         'name',
         'email',
         'password',
+        'is_admin',
     ];
 
     /**
