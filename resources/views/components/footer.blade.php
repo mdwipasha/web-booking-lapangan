@@ -10,10 +10,10 @@
         <div class="text-sm text-gray-600 dark:text-gray-300">
             <div class="font-semibold mb-2">Quick Links</div>
             <ul class="space-y-1">
-                <li class="hover:text-green-500 transition">About Us</li>
-                <li class="hover:text-green-500 transition">FAQ</li>
-                <li class="hover:text-green-500 transition">Terms of Service</li>
-                <li class="hover:text-green-500 transition">Privacy Policy</li>
+                <li class="hover:text-green-500 transition"><a href="">About Us</a></li>
+                <li class="hover:text-green-500 transition"><a href="">FAQ</a></li>
+                <li class="hover:text-green-500 transition"><a href="{{ route('terms') }}">Terms of Service</a></li>
+                <li class="hover:text-green-500 transition"><a href="{{ route('privacy') }}">Privacy Policy</a></li>
             </ul>
         </div>
 

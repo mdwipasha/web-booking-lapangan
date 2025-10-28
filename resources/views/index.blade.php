@@ -1,12 +1,11 @@
-<x-app-layout title="Book Your Field"
-    metaDescription="Book futsal, basketball, and tennis fields easily with Sportly.">
+<x-app-layout title="Book Your Field" metaDescription="Book futsal, basketball, and tennis fields easily with Sportly.">
 
     <!-- HERO -->
     <main class="flex-1">
         <section class="max-w-6xl mx-auto px-6 pt-8" data-animate>
             <div class="relative rounded-xl overflow-hidden card-shadow bg-cover bg-center transform transition duration-500 hover:scale-102 hover:shadow-xl"
                 style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDU1knEBJBbdeALZnN2OJwr1S0W65r37SM3LSD4Rj6tOICms0AADqmwWY03wFG2_k2koXdtnkYcRiJPPBAY_uMVjGCdaX0TqqixVg8hgbeWy931NQ_oC2I904LBusuJhKnHkH3nXmBOiMzCgb5DQJFlqUPYiHIDcaorY0n8Eqma3hJwIIBek2Yzr95pg7YxRq7v20abTUAzik0MCymMYOAueCCWsyVqJ6tZtoMR3X-EQhhdBDGeakuBOdx6xIJXMnXsIRF_43kVMCM');">
-                <div class="backdrop-blur-sm bg-gradient-to-b from-black/30 to-black/10 p-10 md:p-16">
+                <div class="backdrop-blur-sm bg-gradient-to-b from-black/30 to-black/10 p-10 md:p-16 h-auto">
                     <h1 class="text-3xl md:text-5xl font-extrabold text-white drop-shadow-md">Book Your Next Game
                         with Ease</h1>
                     <p class="mt-3 text-sm md:text-base text-white/90">Find and book the best sports fields in your
@@ -50,7 +49,10 @@
 
         <!-- Featured Fields -->
         <section class="max-w-6xl mx-auto px-6 mt-12" data-animate>
-            <h3 class="text-lg font-semibold mb-4">Featured Fields</h3>
+            <div class="flex justify-between">
+                <h3 class="text-lg font-semibold mb-4">Featured Fields</h3>
+                <a href="{{ route('list-lapangan') }}" class="text-green-600 hover:text-green-500 underline">Lihat Semua</a>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 @foreach (['City Arena Futsal', 'Sunset Park Basketball', 'Maplewood Tennis Center'] as $i => $title)
                     <div
@@ -64,9 +66,11 @@
                             <h4 class="font-semibold text-sm">{{ $title }}</h4>
                             <p class="text-xs text-green-500">Downtown, Metropolis</p>
                             <div class="mt-3">
+                                <a href="{{ route('detail') }}">
                                 <button
                                     class="w-full py-2 rounded bg-green-100 dark:bg-gray-700 text-green-600 transition transform hover:-translate-y-1 hover:shadow-md">Book
                                     Now</button>
+                                </a>
                             </div>
                         </div>
                     </div>
